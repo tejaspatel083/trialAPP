@@ -120,7 +120,7 @@ public class DashboardFragment extends Fragment implements SwipeRefreshLayout.On
             public void onCallBack(Person person) {
 
                 textView.setText(person.getName());
-                Toast.makeText(getActivity(), person.getName(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), person.getName(), Toast.LENGTH_SHORT).show();
 
             }
         });

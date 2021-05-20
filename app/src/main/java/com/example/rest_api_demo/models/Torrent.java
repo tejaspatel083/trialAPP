@@ -29,10 +29,10 @@ public class Torrent {
     public Integer peers;
     @SerializedName("size")
     @Expose
-    public BigInteger size;
+    public String size;
     @SerializedName("size_bytes")
     @Expose
-    public Integer sizeBytes;
+    public BigInteger sizeBytes;
     @SerializedName("date_uploaded")
     @Expose
     public String dateUploaded;
