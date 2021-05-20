@@ -55,10 +55,8 @@ public class DashboardFragment extends Fragment implements SwipeRefreshLayout.On
     FirebaseComponents firebaseComponents;
     ReadCallback readCallback;
 
-    @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
 
-    @BindView(R.id.swipeRefresh)
     SwipeRefreshLayout swipeRefreshLayout;
 
 
@@ -107,9 +105,9 @@ public class DashboardFragment extends Fragment implements SwipeRefreshLayout.On
 
         getActivity().setTitle("Dashboard");
 
-        ButterKnife.bind(view);
 
-
+        recyclerView = view.findViewById(R.id.recyclerView);
+        swipeRefreshLayout = view.findViewById(R.id.swipeRefresh);
 
         NavigationView navigationView = getActivity().findViewById(R.id.navigationView);
         View headerView = navigationView.getHeaderView(0);
@@ -128,7 +126,7 @@ public class DashboardFragment extends Fragment implements SwipeRefreshLayout.On
         });
 
 
-        swipeRefreshLayout.setOnRefreshListener(this);
+        //swipeRefreshLayout.setOnRefreshListener(this);
 
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());

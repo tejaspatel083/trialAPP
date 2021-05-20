@@ -36,7 +36,7 @@ public class NetworkCheck {
         }
         catch(Exception e)
         {
-            Log.d("Network Check", e.getMessage());
+            Log.d("Network Check", ""+e.getMessage());
             return false;
         }
     }
